@@ -3,8 +3,8 @@
     <title>WC File</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="/build/ext-modern-all.js"></script>
-    <link href="/build/modern/theme-material/resources/theme-material-all.css" rel='stylesheet'/>
+    <script src="build/ext-modern-all.js"></script>
+    <link href="build/modern/theme-material/resources/theme-material-all.css" rel='stylesheet'/>
   </head>
   <body>
       <nav>
@@ -12,8 +12,42 @@
         <a href="/users">Users</a>
       </nav>
       <div id="outlet"></div>
+          <div>
+            <ext-grid title='EXT grid example' height='300' data='[{
+                        "name": "Lisa",
+                        "email": "[lisa@simpsons.com|mailto:lisa@simpsons.com] ",
+                        "phone": "[555-111-1224|tel:5551111224]"
+                      }, {
+                        "name": "Bart",
+                        "email": "[bart@simpsons.com|mailto:bart@simpsons.com]",
+                        "phone": "[555-222-1234|tel:5552221234]"
+                      }, {
+                        "name": "Homer",
+                        "email": "[homer@simpsons.com|mailto:homer@simpsons.com]",
+                        "phone": "[555-222-1244|tel:5552221244]"
+                      }, {
+                        "name": "Marge",
+                        "email": "[marge@simpsons.com|mailto:marge@simpsons.com]",
+                        "phone": "[555-222-1254|tel:5552221254]"
+                      }]'
+              columns='[{
+                        "text": "Name",
+                        "width": "250",
+                        "dataIndex": "name"
+                      }, {
+                        "text": "Email Address",
+                        "flex": "1",
+                        "dataIndex": "email"
+                      }, {
+                        "text": "Phone Number",
+                        "width": "250",
+                        "dataIndex": "phone"
+                      }]' />
+          </div>
+        
+          <ext-button parentComponentId="my-parent-component" check='true' handler="hello" text="Say Hello" ui="action raised" />
       <!-- <div id="breadcrumb"></div> -->
-    <script src="/bundle.js"></script>
+    <script src="bundle.js"></script>
     <p>Hello</p>
   </body>
 </html>

@@ -1,3 +1,4 @@
+import '../dist/ext-wc';
 import { Router } from '@vaadin/router';
 
 const router = new Router(document.getElementById('outlet'));
