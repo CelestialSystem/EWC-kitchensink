@@ -1,0 +1,18 @@
+{
+  "presets": ["react", "es2015"],
+  "plugins": [
+    "transform-custom-element-classes",
+    "transform-es2015-classes"
+  ],
+  "env": {
+    "dev": {
+      "presets": ["react-hmre"]
+    },
+    "test": {
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "dynamic-import-node"
+      ]
+    }
+  }
+}
